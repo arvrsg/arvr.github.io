@@ -767,7 +767,16 @@
             </div>
             <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
             <input type="hidden" name="access_key" value="380eaebf-6e91-40aa-a0cd-be8575dd0b37">
-            <input type="hidden" name="redirect" value="https://arvr.sg/">
+
+            <script>
+              // ...
+              .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    window.location.href = "/" // <-- add this line
+                }
+              // ...   
+              </script>
 
               <div class="row">
                 <div class="col-md-6">
